@@ -1,23 +1,246 @@
----
-layout: default
----
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Steve Hurley Portfolio Page</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+body {
+  height: 100%;
+  
+}
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+/*Navbar*/
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+.navbar-custom {
+  background-color: black;
+}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+li a:hover {
+  background-color: #a3b9c9 !important;
+}
+#about {
+  background: url(https://github.com/chicagoSMH/images/blob/master/technology-727x350.jpg?raw=true) no-repeat;
+  background-size: cover;
+  overflow: auto;
+  margin-top: 50px;
+  background-attachment: fixed;
+}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+
+#about h1{
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+}
+
+#about p {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+  /*background-color: black;
+  opacity: 0.7;*/
+}
+
+#linkedin-btn {
+  background-color: #0274b3;
+  color: white;
+}
+
+#fcc-btn {
+  background-color: #006400;
+  color: white;
+  margin-left: -400px;
+}
+
+#github-btn {
+  backgroung-color: #e0f1ff;
+  margin-left: 104px;
+  margin-right: -35px;
+}
+
+.panel-title {
+  background-color: #181a23;
+  color: white;
+  
+}
+
+#portfolio {
+  background-color: #A3B9C9;
+}
+
+#contact {
+  background-color: #457b9d;
+}
+
+#portfoliosize {
+  height: 220px;
+}
+
+#contact {
+  height: 100px;
+}
+
+</style>
+<body>
+  <header>
+    <nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </header>
+  
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 text-center">
+        <img class="img-responsive img-rounded img-thumbnail" src="https://github.com/chicagoSMH/images/blob/master/IMG_1941.JPG?raw=true"/>
+          
+          <div class="row" id="social-buttons">
+          <div class="col-xs-4">
+            <a href="https://www.linkedin.com/in/hurleysteve?trk=nav_responsive_tab_profile_pic" target="_blank" class="btn btn-default btn-md" id="linkedin-btn"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
+          </div>
+          
+          <div class="col-xs-4">
+            <a href="https://github.com/chicagoSMH" target="_blank" class="btn btn-default btn-md" id="github-btn"><i class="fa fa-github fa-fw"></i> <span class="network-name">GitHub</span></a>
+          </div>
+          
+          <div class="col-xs-4">
+            <a href="http://www.freecodecamp.com/chicagosmh" target="_blank" class="btn btn-default btn-md" id="fcc-btn"><i class="fa fa-fire fa-fw"></i> <span class="network-name">freeCodeCamp</span></a>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-7">
+          <div class="row>">
+            <div class="col-sm-12">
+              <h1>Steve Hurley</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum velit est, dictum quis varius non, molestie semper leo. Curabitur gravida pretium urna quis pulvinar. Pellentesque non tempor velit. Maecenas diam felis, mollis nec ligula laoreet, ultrices rhoncus metus. Etiam vel felis sapien. Maecenas lobortis erat a lobortis porttitor. Nam gravida purus vitae dictum ornare. Mauris consectetur leo a sem pulvinar gravida.</p>
+            </div>
+          </div>         
+          
+  </section>
+        
+        
+         <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <h1 class="text-center" id="projects-header">Projects</h1>
+      <div class="row-center">
+        
+        <div class="col-sm-3">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title text-center">Tribute Page</h4>
+            </div>
+            <a href='http://codepen.io/chicagoSMH/full/JXGpPV/' target="_blank">
+              <div class="panel-body">
+                <img class="img-responsive center-block" src="https://github.com/chicagoSMH/images/blob/master/Screen%20Shot%202016-03-17%20at%2010.49.06%20AM.png?raw=true" id="portfoliosize"/>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title text-center">Coming Soon</h4>
+            </div>
+            <a href='https://github.com/chicagoSMH/images/blob/master/comingsoon.jpg' target="_blank">
+              <div class="panel-body">
+                <img class="img-responsive center-block" src="https://github.com/chicagoSMH/images/blob/master/comingsoon.jpg?raw=true"id="portfoliosize"/>
+              </div>
+            </a>
+          </div>
+        </div>
+      
+        <div class="col-sm-3">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title text-center">Coming Soon</h4>
+            </div>
+            <a href='http://codepen.io/chicagoSMH/full/JXGpPV/' target="_blank">
+              <div class="panel-body">
+                <img class="img-responsive center-block" src="https://github.com/chicagoSMH/images/blob/master/comingsoon.jpg?raw=true"id="portfoliosize"/>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+   <div class="row-center">
+              <div class="col-sm-3">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title text-center">Coming Soon</h4>
+            </div>
+            <a href='http://codepen.io/chicagoSMH/full/JXGpPV/' target="_blank">
+              <div class="panel-body">
+                <img class="img-responsive center-block" src="https://github.com/chicagoSMH/images/blob/master/comingsoon.jpg?raw=true"id="portfoliosize"/>
+              </div>
+            </a>
+          </div>
+        </div>
+    
+      
+        <div class="row-center">
+          <div class="col-sm-3">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title text-center">Coming Soon</h4>
+            </div>
+            <a href='http://codepen.io/chicagoSMH/full/JXGpPV/' target="_blank">
+              <div class="panel-body">
+                <img class="img-responsive center-block" src="https://github.com/chicagoSMH/images/blob/master/comingsoon.jpg?raw=true"id="portfoliosize"/>
+              </div>
+            </a>
+          </div>
+         </div>
+          
+          <div class="col-sm-3">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title text-center">Coming Soon</h4>
+            </div>
+            <a href='http://codepen.io/chicagoSMH/full/JXGpPV/' target="_blank">
+              <div class="panel-body">
+                <img class="img-responsive center-block" src="https://github.com/chicagoSMH/images/blob/master/comingsoon.jpg?raw=true"id="portfoliosize"/>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+ 
+  
+  </section>
+        
+        
+  <!--Contact-->
+  <section id="contact" class="clearfix text-center">
+    <div class="container">
+      <h1 class="text-center" id="contact-header">Contact</h1>
+      <p>Email: #####@gmail.com</p>
+      
+      
+  
+        
+</body>
